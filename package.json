@@ -1,0 +1,22 @@
+{
+  "name": "quick-readme-creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appleschaussaa/Quick-README-creator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appleschaussaa/Quick-README-creator/issues"
+  },
+  "homepage": "https://github.com/appleschaussaa/Quick-README-creator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
