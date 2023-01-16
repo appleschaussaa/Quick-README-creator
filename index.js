@@ -1,9 +1,27 @@
-// TODO: Include packages needed for this application
+// Required packages
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generate = require("util");
-// TODO: Create an array of questions for user input
-const questions = [
+
+// Required to use generateMarkDown
+const generatefile = require("./util/generateMarkdown");
+
+// Rough draft prompts
+const promptQuestions = () => {
+    return inquirer.prompt ([
+    {
+        type: "input",
+        name: "title",
+        message: "What is your project title?",
+        default: "Fill title in at a later time",
+        // needto look into using validate
+    },
+    {
+        type: "input",
+        name: "description",
+        message: "Provide a description (e.g., motivation, why it was built, what was learned",
+        defaullt: "description goes here"
+    },
     {
         type: "input",
         name: "GitHub",
@@ -15,20 +33,8 @@ const questions = [
         message: "What is your email?",
     },
     {
-        type: "input",
-        name: "title",
-        message: "What is your project title?",
-        default: "Fill title in at a later time",
-    },
-    {
-        type: "input",
-        name: "description",
-        message: "Provide a description (e.g., motivation, why it was built, what was learned",
-        defaullt: "description goes here"
-    },
-    {
         type: "list", 
-        name: "licenses",
+        name: "license",
         message: "What licenses did you use?",
         choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
     },
@@ -52,17 +58,22 @@ const questions = [
         name: "contributing",
         message: "What does the user need to know about contributing to the repo?",
     }
-];
+])
+};
 
-console.log(questions);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
 
+}
+// pretty sure I can combine the writeToFile inside of the init function
+const init = () => {
+    promptQuestions()
+}
 // // TODO: Create a function to initialize app
 // function init() {}
 
 // // Function call to initialize app
-// init();
+init();
 
-console.log(process.argv);
+// console.log(process.argv);
