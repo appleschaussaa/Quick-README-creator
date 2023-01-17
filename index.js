@@ -1,15 +1,15 @@
 // Required packages
-const fs = require("fs");
+const fs = require("fs").promises;
 const inquirer = require("inquirer");
-const generate = require("util");
-const generateMarkdown = require("./util/generateMarkdown");
+const util = require("util");
+// allows for writeFile to work, needs come after top 3
+const writeFile = util.promisify(fs.writeFile);
+// Required to use generateMarkdown
+const generateMarkdown = require("./util/generateMarkdown.js");
 
-// Required to use generateMarkDown
-const generatefile = require("./util/generateMarkdown");
 
 // Rough draft prompts
 const promptQuestions = async () => {
-    // return not sure if this is needed here
 
     await inquirer.prompt ([
     {
@@ -51,6 +51,12 @@ const promptQuestions = async () => {
         name: "license",
         message: "What licenses did you use?",
         choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD", "ISC", "None"],
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("Must select at least 1 or none");
+            }
+                    return true;
+            }
     },
     {
         type: "input",
@@ -73,6 +79,7 @@ const promptQuestions = async () => {
         message: "What does the user need to know about contributing to the repo?",
     },
 ])
+return
 };
 
 
@@ -81,12 +88,15 @@ const promptQuestions = async () => {
 
 // }
 // pretty sure I can combine the writeToFile inside of the init function
-const init = () => {
-    promptQuestions() 
-        .then((data) => fs.writeFile("index.html", generateMarkdown(data)))
+
+ const init = () => {
+    
+    promptQuestions()
+        .then(() => writeFile("mockREADME.md", generateMarkdown("answers")))
         .then(() => console.log("Congrats! Check out your new README.md file"))
         .catch((err) => console.error(err));
 };
+
 // // TODO: Create a function to initialize app
 // function init() {}
 

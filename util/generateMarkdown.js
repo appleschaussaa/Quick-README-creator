@@ -17,31 +17,33 @@
 // }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+const generateMarkdown = async (title, description, GitHub, email, license, installation, test, info, contributing ) => {
   return `
-  # ${data.title}
+  # ${title}
 
   ## Description
-  ${data.description}
+  ${description}
 
   ## Table of Contents
 
   ## Licenses
-  ${data.license}
+  ${license}
 
   ## Contacts
-  ${data.GitHub}
-  ${data.email}
+  ${GitHub}
+  ${email}
+
+  ## Installation
+  ${installation}
 
   ## Testing
-  ${data.installation}
+  ${test}
 
-  ## Info
-  ${data.info}
+  ## Information
+  ${info}
 
   ## Contributing
-  ${data.contributing}
-
+  ${contributing}
 `;
 };
 
