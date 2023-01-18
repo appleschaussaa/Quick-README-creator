@@ -3,13 +3,12 @@ const fs = require("fs").promises;
 const inquirer = require("inquirer");
 const util = require("util");
 // allows for writeFile to work, needs come after top 3
-const writeFile = util.promisify(fs.writeFile);
+const writeFile = util.promisify(fs.writeFile).json;
 // Required to use generateMarkdown
 const generateMarkdown = require("./util/generateMarkdown.js");
 
-
 // Rough draft prompts
-const promptQuestions = async () => {
+const promptQuestions = async (responses) => {
 
     await inquirer.prompt ([
     {
@@ -79,28 +78,35 @@ const promptQuestions = async () => {
         message: "What does the user need to know about contributing to the repo?",
     },
 ])
-return
+// return(responses)
 };
+
+
 
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
 
 // }
-// pretty sure I can combine the writeToFile inside of the init function
+// pretty sure I need to adjust this, trying out options
+const data = JSON.stringify(generateMarkdown(promptQuestions(responses)));
 
- const init = () => {
+const writeToFile = async () => {
     
     promptQuestions()
-        .then(() => writeFile("mockREADME.md", generateMarkdown("answers")))
+        .then(() => fs.writeFile("mockREADME.md", data))
         .then(() => console.log("Congrats! Check out your new README.md file"))
         .catch((err) => console.error(err));
 };
 
 // // TODO: Create a function to initialize app
 // function init() {}
+const init = () => {
+    writeToFile()
+};
 
 // // Function call to initialize app
+
 init();
 
 // console.log(process.argv);
