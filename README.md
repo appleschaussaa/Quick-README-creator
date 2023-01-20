@@ -2,17 +2,13 @@
 ​
 - [Overview](#overview)
  - [The challenge](#the-challenge)
- - [Screenshot](#screenshot)
- - [Links](#links)
+ - [Video-Demonstration](#Video-Demonstration)
 - [My process](#my-process)
  - [Built with](#built-with)
  - [What I learned](#what-i-learned)
  - [Continued development](#continued-development)
  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-​
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 ​
 ## Overview
 ​
@@ -20,89 +16,39 @@
 ​
 Users should be able to:
 ​
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+- Use Javascript to build functions and impliment inquirer
+- Use the terminal to implement node and npm for modules
 ​
-### Screenshot
+### Video Demonstration
 ​
 ![](./screenshot.jpg)
-​
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-​
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-​
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-​
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-​
-### Links
-​
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 ​
 ## My process
 ​
 ### Built with
 ​
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-​
-​
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Javascript
+- npm modules
+- Terminal and node
 ​
 ### What I learned
 ​
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-​
-To see how you can add code snippets, see below:
-​
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-​
-```css
-.proud-of-this-css {
- color: papayawhip;
-}
-```
-​
-```js
-const proudOfThisFunc = () => {
- console.log("🎉");
-};
-```
-​
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-​
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+It is a little late in the course but I have learned that I have to compartmentalize a lot better, I felt really good through most of the beginning of this challenge but slowly got overwhelmed and confused when things would not work. A lot of that was due to jumping around and working on different parts of the code that impacted other sections and probably was my downfall.
 ​
 ### Continued development
 ​
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-​
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Pretty much all of this. I made a seperate file called oldindex.js that was from a previous commit. I had gotten the prompt to show up in node and even create a mockREADME.md file but the prompt results would not show up. The newer index.js file looked like it was going to give me better results but ultimately could not stitch it together like the oldindex. I have left a lot of commented out code as reference of some of the thing I have tried so when I come back to this preject I'll know what not to do when revising. Which will be soon...
 ​
 ### Useful resources
 ​
-- [Example resource 1](https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/) - Helpful super in depth reminder for using require
-- [Example resource 2](https://www.npmjs.com/package/inquirer) - excellent breakdown for the whole inquirer process
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [node/require resource](https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/) - Helpful super in depth reminder for using require
+- [inquirer rescourse](https://www.npmjs.com/package/inquirer) - excellent breakdown for the whole inquirer process
+- [rendering badges resource](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) - This really helped with rendering the licenses and badges
 ​
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 ​
 ## Author
- Your Name
-- Website - [Add your name here](https://www.your-site.com)
-- GitHub - [yourusername](https://github.com/yourusername)
+Robert Schauss
+- GitHub - [appleschaussaa](https://github.com/appleschaussaa)
+- challenge repo - (https://github.com/appleschaussaa/Quick-README-creator)
+
 ​
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-​
-## Acknowledgments
-​
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-​
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

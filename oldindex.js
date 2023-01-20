@@ -5,12 +5,14 @@ const inquirer = require("inquirer");
 // allows for writeFile to work, needs come after top 3
 // const writeFile = util.promisify(fs.writeFile);
 // Required to use generateMarkdown
-const generateMarkdown = require("./util/generateMarkdown");
+const generateMarkdown = require("./util/generateMarkdown.js");
+
+// const { default: inquirer } = require("inquirer");
 
 // Rough draft prompts
-// const promptQuestions = async () => {
-const questions =
-    inquirer.prompt [
+const promptQuestions = async () => {
+
+    await inquirer.prompt ([
     {
         type: "input",
         name: "title",
@@ -76,13 +78,11 @@ const questions =
         type: "input",
         name: "contributing",
         message: "What does the user need to know about contributing to the repo?",
-    }
+    },
+])
+return
+};
 
-];
-// console.log(questions);
-// return;
-
-// promptQuestions();
 
 
 
@@ -91,46 +91,24 @@ const questions =
 
 // }
 // pretty sure I need to adjust this, trying out options
-// const answers = promptQuestions([]);
+// const data = JSON.stringify(generateMarkdown(promptQuestions(responses)));
 // const data = JSON.stringify(generateMarkdown());
-// const readme = generateMarkdown(questions);
-// const readme = questions;
-const askQuestions = () => {
-    inquirer.prompt(questions)
-    .then((data) => writeToFile(generateMarkdown(data)))
-    .then(() => console.log("check it out"))
-    return(results);
-};
+// const responses = promptQuestions(data);
 
-const writeToFile = () => {
-    // const path = "mockREADME.md";
-    const responses = askQuestions();
-    fs.writeFile("mockREADME.md", responses)
-    // return(readme);
+const writeToFile = async () => {
+    
+    await promptQuestions()
+    // inquirer
+    //     .prompt
+        .then(() => 
+        fs.writeFile("mockREADME.md", data))
+        .then(() => console.log("Congrats! Check out your new README.md file"))
+        .catch((err) => console.error(err));
 };
-
-// const writeToFile = () => {
-//     // inquirer
-//     //     .prompt
-//     //     .then(() => fs.writeFile("mockREADME.md", readme, err))
-//     //     .then(() => console.log("Congrats! Check out your new README.md file"))
-//     //     .catch((err) => console.error(err));
-//     // await askQuestions()
-//     // .then(() => fs.writeFile("mockREADME.md", writeToFile() ))
-//     // .then(() => console.log("Congrats! Check out your new README.md file"))
-//     // .catch((error) => console.log(error));
-//     askQuestions();
-//     const responses = askQuestions;
-//     fs.writeFile("mockREADME.md", responses);
-//     console.log("Congrats! Check out your new README.md file");
-// };
 
 // // TODO: Create a function to initialize app
 // function init() {}
-// const init = () => {
-//     writeToFile(readme)
-// };
-function init() {
+const init = () => {
     writeToFile()
 };
 
