@@ -1,6 +1,6 @@
 // Required packages
-const fs = require("fs").promises;
 const inquirer = require("inquirer");
+const fs = require("fs").promises;
 // const util = require("util");
 // allows for writeFile to work, needs come after top 3
 // const writeFile = util.promisify(fs.writeFile);
@@ -8,9 +8,8 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./util/generateMarkdown");
 
 // Rough draft prompts
-// const promptQuestions = async () => {
-const questions =
-    inquirer.prompt [
+const questions = () => {
+    return inquirer.prompt ([
     {
         type: "input",
         name: "title",
@@ -65,7 +64,7 @@ const questions =
     {
         type: "input",
         name: "test",
-        message: "What command shoukd be run to run test?",
+        message: "What command should be run to run test?",
     },
     {
         type: "input",
@@ -78,7 +77,8 @@ const questions =
         message: "What does the user need to know about contributing to the repo?",
     }
 
-];
+])
+};
 // console.log(questions);
 // return;
 
@@ -95,19 +95,21 @@ const questions =
 // const data = JSON.stringify(generateMarkdown());
 // const readme = generateMarkdown(questions);
 // const readme = questions;
-const askQuestions = () => {
-    inquirer.prompt(questions)
-    .then((data) => writeToFile(generateMarkdown(data)))
-    .then(() => console.log("check it out"))
-    return(results);
-};
 
-const writeToFile = () => {
-    // const path = "mockREADME.md";
-    const responses = askQuestions();
-    fs.writeFile("mockREADME.md", responses)
-    // return(readme);
-};
+// const askQuestions = () => {
+//     inquirer.prompt(questions)
+//     .then((data) => (generateMarkdown(data)))
+//     .then(() => console.log("check it out"))
+//     return(results);
+// };
+
+
+// const writeToFile = () => {
+//     // const path = "mockREADME.md";
+//     const responses = askQuestions;
+//     fs.writeFile("mockREADME.md", responses)
+//     return(readme);
+// };
 
 // const writeToFile = () => {
 //     // inquirer
@@ -130,8 +132,12 @@ const writeToFile = () => {
 // const init = () => {
 //     writeToFile(readme)
 // };
-function init() {
-    writeToFile()
+const init = () => {
+    questions()
+        .then((results) => fs.writeFile("mockREADME.md", generateMarkdown(results)))
+        .then(() => console.log("check out your new README under mockREAD.md"))
+        .catch((err) => console.log(err));
+        // writeToFile(readme)
 };
 
 // // Function call to initialize app
