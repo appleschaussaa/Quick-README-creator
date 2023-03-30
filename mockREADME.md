@@ -1,9 +1,9 @@
 
-  # rf
+  # Quick-README-creator
 
   ## Table of Contents
   * [Description](#description)
-  * [Licenses and Badges](#licenses-and-badges)
+  * [Licenses](#licenses)
   * [Contacts](#contacts)
   * [Installation](#installation)
   * [Testing](#testing)
@@ -11,25 +11,25 @@
   * [Tests](#tests)
 
   ## Description
-  wef
+  This will provide a professional README.md with answers inserted
 
   ## Licenses & Badges
-  APACHE 2.0,BSD,ISC
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  MIT,GPL 3.0,ISC
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
 
   ## Contacts
-  wef
-  wef
+  github.com/appleschaussaa
+  email@gmail.com
 
   ## Installation
-  er
+  Use npm install
 
   ## Testing
-  qf
+  N/A
 
   ## Information
-  
+  Type node index.js into command line to start prompt
 
   ## Contributing
-  
+  Please use a new branch
   

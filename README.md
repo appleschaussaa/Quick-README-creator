@@ -9,6 +9,7 @@
  - [Continued development](#continued-development)
  - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 ​
 ## Overview
 ​
@@ -17,6 +18,7 @@
 Users should be able to:
 ​
 - Use Javascript to build functions and impliment inquirer
+- Use module.exports to bring function from one file to another
 - Use the terminal to implement node and npm for modules
 ​
 ### Video Demonstration
@@ -33,22 +35,27 @@ Users should be able to:
 ​
 ### What I learned
 ​
-It is a little late in the course but I have learned that I have to compartmentalize a lot better, I felt really good through most of the beginning of this challenge but slowly got overwhelmed and confused when things would not work. A lot of that was due to jumping around and working on different parts of the code that impacted other sections and probably was my downfall.
+Upon fixing up this challenge it was nice to go through with the knowledge and more familiarity I have now to implement while still using only technology we learned up until the point of this section.
 ​
 ### Continued development
 ​
-Pretty much all of this. I made a seperate file called oldindex.js that was from a previous commit. I had gotten the prompt to show up in node and even create a mockREADME.md file but the prompt results would not show up. The newer index.js file looked like it was going to give me better results but ultimately could not stitch it together like the oldindex. I have left a lot of commented out code as reference of some of the thing I have tried so when I come back to this preject I'll know what not to do when revising. Which will be soon...
+There are still a few spots that I would like to touch up, especially one the generateMarkdown.js file. So far I could only get the badges for the MIT license to show up, which currently is because of the return after every if statement but could not get it to work at all without it. Also the comments from the last submission mentioned I could just pass data into my generateMarkdown function and then reference them with dot notation but it either did not show up correctly or caused an error when trying.
 ​
 ### Useful resources
 ​
 - [node/require resource](https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/) - Helpful super in depth reminder for using require
 - [inquirer rescourse](https://www.npmjs.com/package/inquirer) - excellent breakdown for the whole inquirer process
 - [rendering badges resource](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) - This really helped with rendering the licenses and badges
+- [If/else resource](https://www.freecodecamp.org/news/javascript-if-else-and-if-then-js-conditional-statements/) - a little reminder of the options for if else statements
 ​
 ​
 ## Author
 Robert Schauss
 - GitHub - [appleschaussaa](https://github.com/appleschaussaa)
-- challenge repo - (https://github.com/appleschaussaa/Quick-README-creator)
+- challenge repo - [Quick-README-creator](https://github.com/appleschaussaa/Quick-README-creator)
+
+## Acknowledgments
+
+I would like to thank the TAs on this one especially in hindsight. Both that helped me in longer capacities made comments that I was doing too much with the functions I originally had and one even mentioned I could get away with just one which caused me to find ways to slim it down a lot. Also the grader from the first submission provided some excellent feedback and even though I could could not immpliment all of the tips it has given me some ideas to look into.
 
 ​
