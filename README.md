@@ -23,7 +23,7 @@ Users should be able to:
 ​
 ### Video Demonstration
 ​
-![video walkthrough](https://drive.google.com/file/d/1HBZI_RhQUwj2UgE8QSNR6BoKLM4xAI6E/view?usp=sharing)
+[video walkthrough](https://drive.google.com/file/d/1HBZI_RhQUwj2UgE8QSNR6BoKLM4xAI6E/view?usp=sharing)
 ​
 ## My process
 ​
