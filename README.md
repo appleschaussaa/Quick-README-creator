@@ -23,7 +23,9 @@ Users should be able to:
 ​
 ### Video Demonstration
 ​
-![](./screenshot.jpg)
+![Alt text](Assets/videos/Challenge-9%20video%20walkthrough.gif)
+
+[Link to video walkthrough](https://drive.google.com/file/d/1HBZI_RhQUwj2UgE8QSNR6BoKLM4xAI6E/view?usp=sharing)
 ​
 ## My process
 ​
